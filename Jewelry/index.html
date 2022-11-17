@@ -1,0 +1,256 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    <title>Jevelry-design</title>
+    
+</head>
+<body>
+  <section class="sec1">
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="img/img-1.jpg" style="width:100%">
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="img/img-2.jpg" style="width:100%">
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="img/img-3.jpg" style="width:100%">
+        </div>
+        
+        <a class="prev" onClick="plusSlides(-1)">❮</a>
+        <a class="next" onClick="plusSlides(1)">❯</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onClick="currentSlide(1)"></span> 
+          <span class="dot" onClick="currentSlide(2)"></span> 
+          <span class="dot" onClick="currentSlide(3)"></span> 
+          </div>
+    </section>
+
+    <section class="mnp">
+        <div class="test">
+            <h1>testimonial</h1>
+            <div class="container">
+                <div class="indicator">
+                    <span class="btn active"></span>
+                    <span class="btn"></span>
+                    <span class="btn"></span>
+                    <span class="btn"></span>
+                </div>
+                <div class="testimonial">
+                <div class="slide-row" id="slide">
+                    <div class="slide-col">
+                        <div class="user-text">
+                            <p>Hi Lauren, The ring arrived today and it is beautiful. My wife absolutely loves it, and I wanted to take a moment to thank you for your help in guiding me through the process and the honest information. Have a great day!</p>
+                            <h3>Ali</h3>
+                            <p>Akber</p>
+                            </div>
+                            <div class="user-img">
+                            <img src="img/test-1.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="slide-col">
+                        <div class="user-text">
+                            <p>Thank you for everything!  The items are of high quality, the service is superb and packaging is impeccable.  I will definitely order again!</p>
+                            <h3>Usman</h3>
+                            <p>Ghani</p>
+                        </div>
+                        <div class="user-img">
+                            <img src="img/test-2.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="slide-col">
+                        <div class="user-text">
+                            <p>It is nice to know that your company takes the time to get to know their customers.  I am very pleased with my purchases and wish that I would of found you earlier!</p>
+                            <h3>Ayesha</h3>
+                            <p>Sheikh</p>
+                        </div>
+                        <div class="user-img">
+                            <img src="img/test-3.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="slide-col">
+                        <div class="user-text">
+                            <p>Everything I have received so far has been wonderful.  I am working on making samples for my website and am so happy with the quality and value of everything.  I did hours and days and weeks of looking and pricing before placing an order, and Halstead was by far the best in both selection and cost.</p>
+                            <h3>Liam</h3>
+                            <p>Noah</p>
+                        </div>
+                        <div class="user-img">
+                            <img src="img/test-4.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </section>
+    <section class="sec3">
+        <h1 style="text-align: center; font-size: xx-large">Contact-Us</h1>
+        <div class="form">
+        <form action="#" onsubmit="return validation()">
+            <i class="fas fa-paper-plane"></i>
+      
+            <div class="input-group">
+              <label for="fname">First Name:   </label>
+              <input type="text" placeholder="Enter your First Name" id="fname" name="fname" autocomplete="off">
+              <span id="firstname"></span>
+            </div>
+
+            <div class="input-group">
+              <label for="lname">Last Name:  </label>
+              <input type="text" placeholder="Enter your Last Name" id="lname" name="lname" autocomplete="off">
+              <span id="lastname"></span>
+            </div>
+            
+            <div class="input-group">
+              <label>Email Id:  </label>
+              <input type="email" name="email" id="emails" placeholder="Enter Email">
+              <span id="emailids"></span>
+            </div> 
+
+            <div class="input-group">
+              <label>Phone No:  </label>
+              <input type="text" placeholder="Enter 11 digit phone number" name="mobile" id="mobileNumber">
+              <span id="mobileno"></span>
+            </div>
+        
+            <div class="input-group">
+              <label>Your Message:  </label>
+              <textarea rows="5" placeholder="Enter your message"></textarea>
+            </div>
+      
+            <input type="submit" name="submit" value="submit" class="button">
+         
+        </form>
+    </div>
+    </section>
+    <script type="text/javascript">
+	let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        var btn = document.getElementsByClassName("btn");
+        var slide = document.getElementById("slide");
+        
+        btn[0].onclick = function(){
+          slide.style.transform = "translatex(0px)";
+        }
+        btn[1].onclick = function(){
+          slide.style.transform = "translatex(-800px)";
+        }
+        btn[2].onclick = function(){
+          slide.style.transform = "translatex(-1600px)";
+        }
+        btn[3].onclick = function(){
+          slide.style.transform = "translatex(-2400px)";
+        }
+
+        function validation()
+    {
+      var fname = document.getElementById('fname').value;
+      var lname = document.getElementById('lname').value;
+			var emails = document.getElementById('emails').value;
+			var mobileNumber = document.getElementById('mobileNumber').value;
+
+      if(fname == ""){
+				document.getElementById('firstname').innerHTML =" ** Please fill the firstname field";
+				return false;
+			}
+			if((fname.length <= 2) || (fname.length > 20)) {
+				document.getElementById('firstname').innerHTML =" ** firstname lenght must be between 2 and 20";
+				return false;	
+			}
+			if(!isNaN(fname)){
+				document.getElementById('firstname').innerHTML =" ** only characters are allowed";
+				return false;
+      }
+        
+			
+			if(lname == ""){
+				document.getElementById('lastname').innerHTML =" ** Please fill the firstname field";
+				return false;
+			}
+			if((lname.length <= 2) || (fname.length > 20)) {
+				document.getElementById('lastname').innerHTML =" ** lastname lenght must be between 2 and 20";
+				return false;	
+			}
+			if(!isNaN(lname)){
+				document.getElementById('lastname').innerHTML =" ** only characters are allowed";
+				return false;
+			}
+
+
+      if(emails == ""){
+				document.getElementById('emailids').innerHTML =" ** Please fill the email idx` field";
+				return false;
+			}
+			if(emails.indexOf('@') <= 0 ){
+				document.getElementById('emailids').innerHTML =" ** @ Invalid Position";
+				return false;
+			}
+
+			if((emails.charAt(emails.length-4)!='.') && (emails.charAt(emails.length-3)!='.')){
+				document.getElementById('emailids').innerHTML =" ** . Invalid Position";
+				return false;
+			}
+
+      if(mobileNumber == ""){
+				document.getElementById('mobileno').innerHTML =" ** Please fill the mobile NUmber field";
+				return false;
+			}
+			if(isNaN(mobileNumber)){
+				document.getElementById('mobileno').innerHTML =" ** user must write digits only not characters";
+				return false;
+			}
+			if(mobileNumber.length!=11){
+				document.getElementById('mobileno').innerHTML =" ** Mobile Number must be 11 digits only";
+				return false;
+			}
+
+    }
+
+        
+        
+        </script>
+</body>
+
+</html>
